@@ -19,25 +19,32 @@ public class ScrollingActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_scrolling);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-        CollapsingToolbarLayout toolBarLayout = (CollapsingToolbarLayout) findViewById(R.id.toolbar);
-        toolBarLayout.setTitle(getTitle());
+        try {
+            super.onCreate(savedInstanceState);
+            setContentView(R.layout.activity_scrolling);
+            Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+            setSupportActionBar(toolbar);
+            CollapsingToolbarLayout toolBarLayout = (CollapsingToolbarLayout) findViewById(R.id.toolbar);
+            toolBarLayout.setTitle(getTitle());
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
+            /*FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+            fab.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                            .setAction("Action", null).show();
+                }
+            });*/
 
+        }catch (Exception e){
+            e.printStackTrace();
+            Toast.makeText(ScrollingActivity.this,e.toString(),Toast.LENGTH_LONG).show();
+
+        }
         Intent intent = getIntent();
         String city = intent.getStringExtra("City");
         Toast.makeText(ScrollingActivity.this,"Current city is " + city,Toast.LENGTH_SHORT).show();
+
     }
 
     @Override
