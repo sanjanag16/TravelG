@@ -1,5 +1,6 @@
 package com.example.travelg;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.google.android.material.appbar.CollapsingToolbarLayout;
@@ -12,6 +13,7 @@ import androidx.appcompat.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 public class ScrollingActivity extends AppCompatActivity {
 
@@ -32,6 +34,10 @@ public class ScrollingActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+
+        Intent intent = getIntent();
+        String city = intent.getStringExtra("City");
+        Toast.makeText(ScrollingActivity.this,"Current city is " + city,Toast.LENGTH_SHORT).show();
     }
 
     @Override
