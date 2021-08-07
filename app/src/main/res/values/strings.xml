@@ -1,12 +1,11 @@
 <resources>
     <string name="app_name">TravelG</string>
     <string name="large_text">
-        "Bangalore/Bengaluru \n\n"
 
-        "Known as both the "Garden City" and "The Silicon Valley of India," Bangalore (officially "Bengaluru") is a techie’s paradise, "
-        "boasting the highest concentration of IT companies in the country. When you’re done geeking out, there are plenty of gardens, museums, natural features, palaces and temples to fill your dance card.\n"
-        "Visit Vidhana Soudha, Cubbon Park and the Ulsoor Lake of Bangalore, well known for its beautiful locales and boating facilities. "
-        "Bangalore is also a major centre of Indian classical music and dance, and of vivid, cutting-edge nightlife."
+        Known as both the "Garden City" and "The Silicon Valley of India," Bangalore (officially "Bengaluru") is a techie’s paradise,
+        boasting the highest concentration of IT companies in the country. When you’re done geeking out, there are plenty of gardens, museums, natural features, palaces and temples to fill your dance card.
+        Visit Vidhana Soudha, Cubbon Park and the Ulsoor Lake of Bangalore, well known for its beautiful locales and boating facilities.
+        Bangalore is also a major centre of Indian classical music and dance, and of vivid, cutting-edge nightlife.
 
     </string>
     <string name="action_settings">Settings</string>
