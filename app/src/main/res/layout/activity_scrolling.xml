@@ -20,7 +20,7 @@
         tools:layout_editor_absoluteX="0dp" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/cityNameView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Bangalore"
@@ -51,6 +51,7 @@
         android:layout_height="68dp"
         android:text="Hotels"
         android:textAlignment="viewStart"
+        android:gravity="start"
         android:textColor="#1C1818"
         app:backgroundTint="#FFFFFF"
         app:icon="@drawable/ic_baseline_expand_more_24"
@@ -76,12 +77,13 @@
         app:layout_constraintVertical_bias="0.618" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/button3"
         style="@style/Widget.MaterialComponents.Button.Icon"
         android:layout_width="407dp"
         android:layout_height="82dp"
         android:text="Tourists Spots"
         android:textAlignment="viewStart"
+        android:gravity="start"
         android:textColor="#1C1818"
         app:backgroundTint="#FFFFFF"
         app:icon="@drawable/ic_baseline_expand_more_24"
@@ -95,7 +97,7 @@
         app:layout_constraintVertical_bias="0.734" />
 
     <TextView
-        android:id="@+id/textView10"
+        android:id="@+id/textView11"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text='      "ISKCON Temple Bangalore",       "Cubbon Park",       "Wonderla Amusement Park",       "Lalbagh Botanical Garden",       "Brigade Road",       "Bangalore Palace",       "Nandi Hills"'
@@ -107,12 +109,13 @@
         app:layout_constraintVertical_bias="0.843" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/button4"
         style="@style/Widget.MaterialComponents.Button.Icon"
         android:layout_width="407dp"
         android:layout_height="82dp"
         android:text="Hidden Gems"
         android:textAlignment="viewStart"
+        android:gravity="start"
         android:textColor="#1C1818"
         app:backgroundTint="#FFFFFF"
         app:icon="@drawable/ic_baseline_expand_more_24"
@@ -126,7 +129,7 @@
         app:layout_constraintVertical_bias="0.861" />
 
     <TextView
-        android:id="@+id/textView10"
+        android:id="@+id/textView12"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text='       "Hennur Lake",

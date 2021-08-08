@@ -1,0 +1,185 @@
+[
+  {
+    "city": "Bangalore",
+    "description": "Known as both the \"Garden City\" and \"The Silicon Valley of India,\" Bangalore (officially \"Bengaluru\") is a techie’s paradise, boasting the highest concentration of IT companies in the country. When you’re done geeking out, there are plenty of gardens, museums, natural features, palaces and temples to fill your dance card. Visit Vidhana Soudha, Cubbon Park and the Ulsoor Lake of Bangalore, well known for its beautiful locales and boating facilities. Bangalore is also a major centre of Indian classical music and dance, and of vivid, cutting-edge nightlife.",
+    "hotels": [
+      "Sheraton Grand Bengaluru Whitefield Hotel & Convention Center",
+      "The Leela Palace Bengaluru",
+      "Hilton Bangalore Embassy GolfLinks",
+      "ITC Windsor, Bengaluru - a Luxury Collection Hotel",
+      "Renaissance Bengaluru Race Course Hotel",
+      "Four Seasons Hotel Bengaluru",
+      "Four Seasons Hotel Bengaluru"
+    ],
+    "tourist": [
+      "ISKCON Temple Bangalore",
+      "Cubbon Park",
+      "Wonderla Amusement Park",
+      "Lalbagh Botanical Garden",
+      "Brigade Road",
+      "Bangalore Palace",
+      "Nandi Hills"
+    ],
+    "hidden": [
+      "Hennur Lake",
+      "Turahalli Forest",
+      "Chhota Ladakh",
+      "Manchanabele Dam",
+      "Kaikondrahalli Lake",
+      "Hesaraghatta Lake"
+    ]
+  },
+  {
+    "city": "Hyderabad",
+    "description": "Want a taste of being royal? Eat in Hyderabad, where culinary traditions have been passed down from the Nizam monarchy. Arabic, Turkish and Mughlai influences are easily recognisable. The city is famous for its rich, aromatic biryani made with lamb, chicken or vegetables and served with fragrant basmati rice. Satisfy your sweet tooth with double-ka-meetha, a bread pudding.",
+    "hotels": [
+      "Novotel Hyderabad Convention Centre",
+      "Sheraton Hyderabad Hotel",
+      "Trident Hyderabad",
+      "ITC Kohenur, Hyderabad - a Luxury Collection Hotel",
+      "Taj Deccan",
+      "Park Hyatt Hyderabad",
+      "Taj Falaknuma Palace, Hyderabad"
+    ],
+    "tourist": [
+      "Ramoji Film City",
+      "Golconda Fort",
+      "Salar Jung Museum",
+      "Chowmahalla Palace",
+      "Taj Falaknuma Palace",
+      "Birla Mandir",
+      "Shri Jagannath Temple"
+    ],
+    "hidden": [
+      "Nagarjuna Sagar Dam",
+      "Bhongir Fort",
+      "Mallela Theertham Waterfalls",
+      "Suryalanka Beach",
+      "Rachakonda Fort",
+      "Ananthagiri Hills"
+    ]
+  },
+  {
+    "city": "Mumbai",
+    "description":"Mumbai (formerly known as Bombay), India, is famous for its chaotic streets. For bargains and people-watching, outdoor bazaars top the list of attractions. Popular waterfront destinations are Marine Drive, where visitors go to watch the sun set over the Arabian Sea, and the carnival-like Juhu Beach. More sightseeing options are the Gandhi Museum, in the leader's former home, and the cave temples of Elephanta Island. For tranquillity, Mumbai has many religious sites, lakes and parks.",
+    "hotels": [
+      "Four Seasons Hotel Mumbai",
+      "Taj Santacruz",
+      "JW Marriott Mumbai Juhu",
+      "Sahara Star Hotel",
+      "The Westin Mumbai Garden City",
+      "The Leela Mumbai",
+      "Trident, Nariman Point"
+    ],
+    "tourist": [
+      "Marine Drive",
+      "Bandra-Worli Sea Link",
+      "Gateway of India",
+      "Kanheri Caves",
+      "Shree Siddhivinayak",
+      "Elephanta Caves",
+      "Mani Bhavan Gandhi Museum"
+    ],
+    "hidden": [
+      "Banaganga",
+      "Sassoon Docks",
+      "Dhobi Ghat",
+      "Pandavkada Falls",
+      "Dahanu Beach",
+      "Sewri Mangrove Park"
+    ]
+  },
+  {
+    "city": "Chennai",
+    "description":"The people of Tamil Nadu consider providing food to others a service to humanity. Thus the service in the state capital, Chennai, is first-rate. Treat your senses to some of the richest South Indian flavours in traditional dishes like sambar, rasam, fish curry or kootu. And don't forget to have a cup of full-bodied Tamil coffee, enhanced with chicory—no visit is complete without it.",
+    "hotels": [
+      "The Leela Palace Chennai",
+      "The Accord Metropolitan",
+      "The Park Chennai",
+      "Novotel Chennai Chamiers Road",
+      "Feathers A Radha Hotel",
+      "Hyatt Regency Chennai",
+      "Le Royal Meridien Chennai"
+    ],
+    "tourist": [
+      "VGP Snow Kingdom",
+      "VGP Universal Kingdom",
+      "Express Avenue Mall",
+      "Kapaleeshwarar Temple",
+      "Chennai Rail Museum",
+      "VGP Marine Kingdom",
+      "St. Thomas Mount National Shrine"
+    ],
+    "hidden": [
+      "St. Thomas Mount",
+      "Vedanthangal Bird Sanctuary",
+      "Bodyguard Muneeswaran Temple",
+      "Green Meadows Resort",
+      "Theosophical Society",
+      "Cholamandal Artist Village"
+    ]
+  },
+  {
+    "city": "Delhi",
+    "description":"Laid out by British architect Edwin Lutyens, the Indian capital is a striking modern metropolis. A gracious contrast to Old Delhi's winding streets, the grand avenues and stately buildings of New Delhi are rich with history and culture, from Gandhi's Delhi home (and the site of his assassination) to the tomb of Humayun, a complex of Mughal buildings reminiscent of the Taj Mahal. Chaotic traffic is best left to the locals. Negotiate a good price for taxis or travel on the new Delhi Metro.",
+    "hotels": [
+      "Pullman New Delhi Aerocity",
+      "The Leela Palace New Delhi",
+      "Hotel Novotel New Delhi Aerocity",
+      "ITC Maurya, a Luxury Collection Hotel, New Delhi",
+      "Taj Palace, New Delhi",
+      "JW Marriott Hotel New Delhi Aerocity",
+      "The Roseate New Delhi"
+    ],
+    "tourist": [
+      "Qutub Minar",
+      "Swaminarayan Akshardham",
+      "Gurudwara Bangla Sahib",
+      "Humayun's Tomb",
+      "Lodhi Garden",
+      "Chandni Chowk",
+      "India Gate"
+    ],
+    "hidden": [
+      "Hauz Khas Village",
+      "Majnu ka Tila: Tibetan Colony",
+      "Agrasen ki Baoli",
+      "Satpula Bridge",
+      "Delhi War Cemetery",
+      "Mirza Ghalib ki Haveli"
+    ]
+
+  },
+  {
+    "city": "Pune",
+    "description":"Love garlic? You’ll love the food in Pune. Unlike other cuisines of the subcontinent, Pune cuisine relies heavily on the aromatic bulb. Soothe your palate with sweets like bhakarwadi, a pastry rolled with coriander, tamarind and sesame seeds, or cool off with a thick milkshake made with dried fruit.",
+    "hotels": [
+      "Sunderban Resort & Spa",
+      "Residency Club",
+      "Hotel The Moneta",
+      "JW Marriott Hotel Pune",
+      "Hotel Studio Estique",
+      "Lemon Tree Hotel, Viman Nagar, Pune"
+    ],
+    "tourist": [
+      "Phoenix Market City",
+      "Sinhagad Fort",
+      "ISKCON NVCC Temple",
+      "National Defence Academy",
+      "Pune Okayama Friendship Garden",
+      "Visapur Fort",
+      "Rajgad Fort"
+    ],
+    "hidden": [
+      "Darshan Museum",
+      "National War Museum",
+      "Devkund waterfalls",
+      "Khandi Waterfalls",
+      "Kirkee War Cemetery",
+      "Mandhe Ghat"
+    ]
+  }]
+
+
+
+

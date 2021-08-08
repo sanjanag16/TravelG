@@ -130,7 +130,7 @@
         app:srcCompat="@drawable/mumbai" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/cityNameView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="258dp"
