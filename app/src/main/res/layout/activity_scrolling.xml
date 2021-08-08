@@ -19,7 +19,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.392" />
+        app:layout_constraintVertical_bias="0.377" />
 
     <TextView
         android:id="@+id/cityNameView"
@@ -47,108 +47,84 @@
         app:layout_constraintVertical_bias="0.027"
         app:srcCompat="@drawable/bangalore_profile" />
 
-    <Button
-        android:id="@+id/hotelsbtn"
-        style="@style/Widget.MaterialComponents.Button.Icon"
-        android:layout_width="408dp"
-        android:layout_height="68dp"
-        android:clickable="true"
-        android:gravity="start"
-        android:onClick="toggle_contents"
-        android:text="Hotels"
-        android:textAlignment="viewStart"
-        android:textColor="#1C1818"
-        android:title="Hotels"
-        app:backgroundTint="#FFFFFF"
-        app:icon="@drawable/ic_baseline_expand_more_24"
-        app:iconTint="#A54E4E"
-        app:iconTintMode="src_in"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_Hotels"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="416dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:startIconDrawable="@drawable/ic_baseline_hotel_24">
+
+
+        <AutoCompleteTextView
+
+            android:id="@+id/act_hotels"
+            android:layout_width="360dp"
+            android:layout_height="68dp"
+            android:hint="Hotels"
+            android:padding="20dp"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_hidden"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="488dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:startIconDrawable="@drawable/ic_baseline_local_activity_24">
+
+
+        <AutoCompleteTextView
+
+            android:id="@+id/act_hidden"
+            android:layout_width="360dp"
+            android:layout_height="68dp"
+            android:hint="Hidden Gems"
+            android:padding="20dp"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_TouristPlaces"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.616" />
+        app:layout_constraintVertical_bias="0.837"
+        app:startIconDrawable="@drawable/ic_baseline_tour_24">
 
-    <TextView
-        android:id="@+id/hotelstextview"
-        android:layout_width="337dp"
-        android:layout_height="65dp"
-        android:text='"Novotel Hyderabad Convention Centre",       "Sheraton Hyderabad Hotel",       "Trident Hyderabad",       "ITC Kohenur, Hyderabad - a Luxury Collection Hotel",       "Taj Deccan",       "Park Hyatt Hyderabad",       "Taj Falaknuma Palace, Hyderabad"'
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.216"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.714" />
 
-    <Button
-        android:id="@+id/button3"
-        style="@style/Widget.MaterialComponents.Button.Icon"
-        android:layout_width="407dp"
-        android:layout_height="82dp"
-        android:gravity="start"
-        android:text="Tourists Spots"
-        android:textAlignment="viewStart"
-        android:textColor="#1C1818"
-        app:backgroundTint="#FFFFFF"
-        app:icon="@drawable/ic_baseline_expand_more_24"
-        app:iconTint="#A54E4E"
-        app:iconTintMode="src_in"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.862" />
+        <AutoCompleteTextView
 
-    <TextView
-        android:id="@+id/textView11"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text='      "ISKCON Temple Bangalore",       "Cubbon Park",       "Wonderla Amusement Park",       "Lalbagh Botanical Garden",       "Brigade Road",       "Bangalore Palace",       "Nandi Hills"'
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.976" />
+            android:id="@+id/act_touristplaces"
+            android:layout_width="360dp"
+            android:layout_height="68dp"
+            android:hint="Tourist Spots"
+            android:padding="20dp"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+    </com.google.android.material.textfield.TextInputLayout>
 
-    <Button
-        android:id="@+id/button4"
-        style="@style/Widget.MaterialComponents.Button.Icon"
-        android:layout_width="407dp"
-        android:layout_height="82dp"
-        android:gravity="start"
-        android:text="Hidden Gems"
-        android:textAlignment="viewStart"
-        android:textColor="#1C1818"
-        app:backgroundTint="#FFFFFF"
-        app:icon="@drawable/ic_baseline_expand_more_24"
-        app:iconTint="#A54E4E"
-        app:iconTintMode="src_in"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.989" />
-
-    <TextView
-        android:id="@+id/textView12"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text='       "Hennur Lake",
-      "Turahalli Forest",
-      "Chhota Ladakh",
-      "Manchanabele Dam",
-      "Kaikondrahalli Lake",
-      "Hesaraghatta Lake"'
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.848" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

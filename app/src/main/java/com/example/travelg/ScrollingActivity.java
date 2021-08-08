@@ -1,11 +1,11 @@
 package com.example.travelg;
 
-import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -13,12 +13,15 @@ import android.widget.Toast;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.material.textfield.TextInputLayout;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.ArrayList;
 import java.util.Locale;
 
 import static java.nio.charset.StandardCharsets.UTF_8;
@@ -27,41 +30,38 @@ import static java.nio.charset.StandardCharsets.UTF_8;
 public class ScrollingActivity extends AppCompatActivity {
 
     TextView cityname, descriptionView;
-    TextView txt_help_gest;
 
     ImageView profileView;
+    TextInputLayout til_hotels, til_hidden;
+    AutoCompleteTextView act_hotels, act_hidden;
+
+    ArrayList<String> arrayList_hotels;
+    ArrayAdapter<String> arrayAdapter_hotels;
 
     @RequiresApi(api = Build.VERSION_CODES.KITKAT)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        til_hotels = (TextInputLayout) findViewById(R.id.til_Hotels);
+        act_hotels = (AutoCompleteTextView) findViewById(R.id.act_hotels);
+
+        arrayList_hotels = new ArrayList<>();
+        arrayList_hotels.add("hotel1");
+        arrayList_hotels.add("hotel2");
+        arrayList_hotels.add("hotel3");
+        arrayList_hotels.add("hotel4");
+
+        arrayAdapter_hotels = new ArrayAdapter<>(getApplicationContext(), R.layout.support_simple_spinner_dropdown_item, arrayList_hotels);
+        act_hotels.setAdapter(arrayAdapter_hotels);
+
+        act_hotels.setThreshold(1);
         try {
             super.onCreate(savedInstanceState);
             setContentView(R.layout.activity_scrolling);
-/*
-            Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-            setSupportActionBar(toolbar);
-            CollapsingToolbarLayout toolBarLayout = (CollapsingToolbarLayout) findViewById(R.id.toolbar);
-            toolBarLayout.setTitle(getTitle());
-*/
-/*
-            FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-            fab.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                            .setAction("Action", null).show();
-                }
-            });*/
 
         } catch (Exception e) {
             e.printStackTrace();
             Toast.makeText(ScrollingActivity.this, e.toString(), Toast.LENGTH_LONG).show();
         }
-        Intent intent = getIntent();
-        String city = intent.getStringExtra("City");
-        txt_help_gest = (TextView) findViewById(R.id.hotelsbtn);
-        // hide until its title is clicked
-        txt_help_gest.setVisibility(View.GONE);
 
         cityname = findViewById(R.id.cityNameView);
         descriptionView = findViewById(R.id.descriptionView);
@@ -75,6 +75,7 @@ public class ScrollingActivity extends AppCompatActivity {
             JSONArray ja = new JSONArray(json);
             for (int i = 0; i<ja.length();i++){
                 JSONObject jo = ja.getJSONObject(i);
+                String city = null;
                 if (jo.getString("city").equals(city)){
                     /*Toast.makeText(ScrollingActivity.this,"Current city is " + city+" and some data is " + jo.getString("description"),Toast.LENGTH_SHORT).show();*/
                     cityname.setText(jo.getString("city").toUpperCase(Locale.ROOT));
@@ -111,13 +112,6 @@ public class ScrollingActivity extends AppCompatActivity {
             return true;
         }
         return super.onOptionsItemSelected(item);
-    }
-
-
-    public void toggle_contents(View v) {
-        txt_help_gest.setVisibility(txt_help_gest.isShown()
-                ? View.GONE
-                : View.VISIBLE);
     }
 
 
