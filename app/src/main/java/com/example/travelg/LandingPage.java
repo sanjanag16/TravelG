@@ -18,8 +18,7 @@ public class LandingPage extends AppCompatActivity {
     }
 
     public void redirect(View v){
-        String city = v.getTag().toString();
-/*        Toast.makeText(LandingPage.this,"Current city:"+city,Toast.LENGTH_SHORT).show();*/
+        String city = v.getTag().toString(); // Contains tag value
         Intent onlyIntent =new Intent(LandingPage.this, ScrollingActivity.class);
         onlyIntent.putExtra("City",city);
         startActivity(onlyIntent);

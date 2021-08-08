@@ -1,5 +1,6 @@
 package com.example.travelg;
 
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.Menu;
@@ -32,28 +33,16 @@ public class ScrollingActivity extends AppCompatActivity {
     TextView cityname, descriptionView;
 
     ImageView profileView;
-    TextInputLayout til_hotels, til_hidden;
-    AutoCompleteTextView act_hotels, act_hidden;
+    TextInputLayout til_hotels, til_hidden, til_tourist;
+    AutoCompleteTextView act_hotels, act_hidden, act_tourist;
 
-    ArrayList<String> arrayList_hotels;
-    ArrayAdapter<String> arrayAdapter_hotels;
+    ArrayList<String> arrayList_hotels,arrayList_tourist,arrayList_hidden;
+    ArrayAdapter<String> arrayAdapter_hotels,arrayAdapter_tourist,arrayAdapter_hidden;
 
     @RequiresApi(api = Build.VERSION_CODES.KITKAT)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        til_hotels = (TextInputLayout) findViewById(R.id.til_Hotels);
-        act_hotels = (AutoCompleteTextView) findViewById(R.id.act_hotels);
 
-        arrayList_hotels = new ArrayList<>();
-        arrayList_hotels.add("hotel1");
-        arrayList_hotels.add("hotel2");
-        arrayList_hotels.add("hotel3");
-        arrayList_hotels.add("hotel4");
-
-        arrayAdapter_hotels = new ArrayAdapter<>(getApplicationContext(), R.layout.support_simple_spinner_dropdown_item, arrayList_hotels);
-        act_hotels.setAdapter(arrayAdapter_hotels);
-
-        act_hotels.setThreshold(1);
         try {
             super.onCreate(savedInstanceState);
             setContentView(R.layout.activity_scrolling);
@@ -62,27 +51,76 @@ public class ScrollingActivity extends AppCompatActivity {
             e.printStackTrace();
             Toast.makeText(ScrollingActivity.this, e.toString(), Toast.LENGTH_LONG).show();
         }
+        til_hotels = (TextInputLayout) findViewById(R.id.til_Hotels);
+        act_hotels = (AutoCompleteTextView) findViewById(R.id.act_hotels);
+        act_hotels.setThreshold(1);
+
+        til_tourist = (TextInputLayout) findViewById(R.id.til_hidden);
+        act_hidden = (AutoCompleteTextView) findViewById(R.id.act_hidden);
+        act_hidden.setThreshold(1);
+
+
+        til_hidden = (TextInputLayout) findViewById(R.id.til_TouristPlaces);
+        act_tourist = (AutoCompleteTextView) findViewById(R.id.act_touristplaces);
+        act_tourist.setThreshold(1);
+
+
 
         cityname = findViewById(R.id.cityNameView);
         descriptionView = findViewById(R.id.descriptionView);
         profileView = findViewById(R.id.profileView);
+
+        Intent intent = getIntent();
+        String city = intent.getStringExtra("City");
+
         try {
             InputStream is = getAssets().open("cities.json");
             int size = is.available() + 1;
             byte[] buffer = new byte[size];
             is.read(buffer);
-            String json = new String(buffer, UTF_8);
-            JSONArray ja = new JSONArray(json);
+            String json = new String(buffer, UTF_8); // One big JSON string with all the data
+            JSONArray ja = new JSONArray(json); // JSON Array composed of JSON objects
+
             for (int i = 0; i<ja.length();i++){
                 JSONObject jo = ja.getJSONObject(i);
-                String city = null;
                 if (jo.getString("city").equals(city)){
-                    /*Toast.makeText(ScrollingActivity.this,"Current city is " + city+" and some data is " + jo.getString("description"),Toast.LENGTH_SHORT).show();*/
+
                     cityname.setText(jo.getString("city").toUpperCase(Locale.ROOT));
                     descriptionView.setText(jo.getString("description"));
                     String profile = city.toLowerCase(Locale.ROOT)+"_profile";
                     int resourceId = this.getResources().getIdentifier(profile,"drawable",this.getPackageName());
-                    profileView.setImageResource(resourceId);
+                    profileView.setImageResource(resourceId); // Sets profile image
+
+//                  For all hotels
+                    arrayList_hotels = new ArrayList<>();
+                    for(int j=0; j<jo.getJSONArray("hotels").length();j++){
+                        arrayList_hotels.add(jo.getJSONArray("hotels").getString(j));
+                    }
+
+                    arrayAdapter_hotels = new ArrayAdapter<>(getApplicationContext(), R.layout.support_simple_spinner_dropdown_item, arrayList_hotels);
+                    act_hotels.setAdapter(arrayAdapter_hotels);
+
+//                  For all tourist places
+
+                    arrayList_tourist = new ArrayList<>();
+                    for(int j=0; j<jo.getJSONArray("tourist").length();j++){
+                        arrayList_tourist.add(jo.getJSONArray("tourist").getString(j));
+                    }
+
+
+                    arrayAdapter_tourist = new ArrayAdapter<>(getApplicationContext(), R.layout.support_simple_spinner_dropdown_item, arrayList_tourist);
+                    act_tourist.setAdapter(arrayAdapter_tourist);
+
+
+//                  For all hidden
+
+                    arrayList_hidden = new ArrayList<>();
+                    for(int j=0; j<jo.getJSONArray("hidden").length();j++){
+                        arrayList_hidden.add(jo.getJSONArray("hidden").getString(j));
+                    }
+
+                    arrayAdapter_hidden = new ArrayAdapter<>(getApplicationContext(), R.layout.support_simple_spinner_dropdown_item, arrayList_hidden);
+                    act_hidden.setAdapter(arrayAdapter_hidden);
                 }
             }
 
