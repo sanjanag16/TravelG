@@ -1,36 +1,36 @@
 package com.example.travelg;
 
 import android.content.Intent;
-import android.content.res.Resources;
-import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.RequiresApi;
-import androidx.annotation.RestrictTo;
 import androidx.appcompat.app.AppCompatActivity;
-
-import java.io.IOException;
-import java.io.InputStream;
-import java.nio.charset.StandardCharsets;
-import java.util.Locale;
-
-import static java.nio.charset.StandardCharsets.UTF_8;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.Locale;
+
+import static java.nio.charset.StandardCharsets.UTF_8;
+
 
 public class ScrollingActivity extends AppCompatActivity {
 
-    TextView cityname,descriptionView;
+    TextView cityname, descriptionView;
+    TextView txt_help_gest;
+
     ImageView profileView;
+
     @RequiresApi(api = Build.VERSION_CODES.KITKAT)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,20 +53,22 @@ public class ScrollingActivity extends AppCompatActivity {
                 }
             });*/
 
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
-            Toast.makeText(ScrollingActivity.this,e.toString(),Toast.LENGTH_LONG).show();
+            Toast.makeText(ScrollingActivity.this, e.toString(), Toast.LENGTH_LONG).show();
         }
         Intent intent = getIntent();
         String city = intent.getStringExtra("City");
-
+        txt_help_gest = (TextView) findViewById(R.id.hotelsbtn);
+        // hide until its title is clicked
+        txt_help_gest.setVisibility(View.GONE);
 
         cityname = findViewById(R.id.cityNameView);
         descriptionView = findViewById(R.id.descriptionView);
         profileView = findViewById(R.id.profileView);
         try {
             InputStream is = getAssets().open("cities.json");
-            int size = is.available()+1;
+            int size = is.available() + 1;
             byte[] buffer = new byte[size];
             is.read(buffer);
             String json = new String(buffer, UTF_8);
@@ -109,6 +111,13 @@ public class ScrollingActivity extends AppCompatActivity {
             return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+
+    public void toggle_contents(View v) {
+        txt_help_gest.setVisibility(txt_help_gest.isShown()
+                ? View.GONE
+                : View.VISIBLE);
     }
 
 

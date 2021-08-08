@@ -15,9 +15,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.4"
-        tools:layout_editor_absoluteX="0dp" />
+        app:layout_constraintVertical_bias="0.392" />
 
     <TextView
         android:id="@+id/cityNameView"
@@ -46,45 +48,48 @@
         app:srcCompat="@drawable/bangalore_profile" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/hotelsbtn"
         style="@style/Widget.MaterialComponents.Button.Icon"
         android:layout_width="408dp"
         android:layout_height="68dp"
+        android:clickable="true"
+        android:gravity="start"
+        android:onClick="toggle_contents"
         android:text="Hotels"
         android:textAlignment="viewStart"
-        android:gravity="start"
         android:textColor="#1C1818"
+        android:title="Hotels"
         app:backgroundTint="#FFFFFF"
         app:icon="@drawable/ic_baseline_expand_more_24"
         app:iconTint="#A54E4E"
         app:iconTintMode="src_in"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.466"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.621" />
+        app:layout_constraintVertical_bias="0.616" />
 
     <TextView
-        android:id="@+id/textView9"
+        android:id="@+id/hotelstextview"
         android:layout_width="337dp"
         android:layout_height="65dp"
         android:text='"Novotel Hyderabad Convention Centre",       "Sheraton Hyderabad Hotel",       "Trident Hyderabad",       "ITC Kohenur, Hyderabad - a Luxury Collection Hotel",       "Taj Deccan",       "Park Hyatt Hyderabad",       "Taj Falaknuma Palace, Hyderabad"'
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.216"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.618" />
+        app:layout_constraintVertical_bias="0.714" />
 
     <Button
         android:id="@+id/button3"
         style="@style/Widget.MaterialComponents.Button.Icon"
         android:layout_width="407dp"
         android:layout_height="82dp"
+        android:gravity="start"
         android:text="Tourists Spots"
         android:textAlignment="viewStart"
-        android:gravity="start"
         android:textColor="#1C1818"
         app:backgroundTint="#FFFFFF"
         app:icon="@drawable/ic_baseline_expand_more_24"
@@ -95,7 +100,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.734" />
+        app:layout_constraintVertical_bias="0.862" />
 
     <TextView
         android:id="@+id/textView11"
@@ -107,16 +112,16 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.843" />
+        app:layout_constraintVertical_bias="0.976" />
 
     <Button
         android:id="@+id/button4"
         style="@style/Widget.MaterialComponents.Button.Icon"
         android:layout_width="407dp"
         android:layout_height="82dp"
+        android:gravity="start"
         android:text="Hidden Gems"
         android:textAlignment="viewStart"
-        android:gravity="start"
         android:textColor="#1C1818"
         app:backgroundTint="#FFFFFF"
         app:icon="@drawable/ic_baseline_expand_more_24"
@@ -127,7 +132,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.861" />
+        app:layout_constraintVertical_bias="0.989" />
 
     <TextView
         android:id="@+id/textView12"
@@ -141,9 +146,9 @@
       "Hesaraghatta Lake"'
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.706" />
+        app:layout_constraintVertical_bias="0.848" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
