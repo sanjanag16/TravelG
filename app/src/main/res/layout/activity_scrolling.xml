@@ -25,6 +25,7 @@
         android:layout_height="wrap_content"
         android:text="Bangalore"
         android:textSize="18sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.048"
@@ -33,7 +34,7 @@
         app:layout_constraintVertical_bias="0.267" />
 
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/profileView"
         android:layout_width="409dp"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -42,7 +43,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.027"
-        app:srcCompat="@drawable/bangalore1" />
+        app:srcCompat="@drawable/bangalore_profile" />
 
     <Button
         android:id="@+id/button2"

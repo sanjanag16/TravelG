@@ -1,19 +1,25 @@
 package com.example.travelg;
 
 import android.content.Intent;
+import android.content.res.Resources;
+import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.RequiresApi;
+import androidx.annotation.RestrictTo;
 import androidx.appcompat.app.AppCompatActivity;
 
 import java.io.IOException;
 import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
+import java.util.Locale;
+
 import static java.nio.charset.StandardCharsets.UTF_8;
 
 import org.json.JSONArray;
@@ -24,6 +30,7 @@ import org.json.JSONObject;
 public class ScrollingActivity extends AppCompatActivity {
 
     TextView cityname,descriptionView;
+    ImageView profileView;
     @RequiresApi(api = Build.VERSION_CODES.KITKAT)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,7 +63,7 @@ public class ScrollingActivity extends AppCompatActivity {
 
         cityname = findViewById(R.id.cityNameView);
         descriptionView = findViewById(R.id.descriptionView);
-
+        profileView = findViewById(R.id.profileView);
         try {
             InputStream is = getAssets().open("cities.json");
             int size = is.available()+1;
@@ -68,8 +75,11 @@ public class ScrollingActivity extends AppCompatActivity {
                 JSONObject jo = ja.getJSONObject(i);
                 if (jo.getString("city").equals(city)){
                     /*Toast.makeText(ScrollingActivity.this,"Current city is " + city+" and some data is " + jo.getString("description"),Toast.LENGTH_SHORT).show();*/
-                    cityname.setText(jo.getString("city"));
+                    cityname.setText(jo.getString("city").toUpperCase(Locale.ROOT));
                     descriptionView.setText(jo.getString("description"));
+                    String profile = city.toLowerCase(Locale.ROOT)+"_profile";
+                    int resourceId = this.getResources().getIdentifier(profile,"drawable",this.getPackageName());
+                    profileView.setImageResource(resourceId);
                 }
             }
 
